@@ -1,0 +1,24 @@
+# dependencies installed by npm
+node_modules
+
+# build artefacts
+_site
+public
+.DS_Store
+*.swp
+*.swp
+*.swp
+*.swp
+*.swp
+src/_includes/.postlist.njk.swp
+src/_includes/.postlist.njk.swp
+src/_includes/.post.njk.swp
+.gitignore.swp
+.package.json.swp
+src/_includes/.base.njk.swo
+src/_includes/.post.njk.swo
+src/blog/.10-ways-to-piss-off-your-designer-without-even-trying.md.swp
+src/blog/.10-ways-to-piss-off-your-designer-without-even-trying.md.swp
+src/blog/.success-in-new-product-development-is-unlikely-so.md.swp
+src/_includes/.base.njk.swp
+src/_includes/.base.njk.swp

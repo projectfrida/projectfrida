@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #000;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 130%;
+}
+h1 {
+  font-size: 6rem;
+}
+h2 {
+  font-size: 4rem;
+}
+p {
+  line-height: 150%;
+  font-size: 1.75rem;
+  margin: 2.5rem 0;
+}
+.emphasis {
+  color: #920751;
+}
+.pf-container {
+  max-width: 88rem;
+  margin: auto;
+}
+.pf-hero {
+  align-items: center;
+}
+.pf-hero__img {
+  background-image: url("../../assets/images/hero.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  margin-bottom: 5rem;
+}
+.pf-hero__content {
+  text-align: center;
+  padding: 10rem;
+}
+.pf-about {
+  background: #920751;
+  color: #fff;
+  padding: 10rem;
+}
+.pf-about__text {
+  max-width: 45rem;
+  margin: auto;
+}
+
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: flex;
+}
+.pf-btn {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  display: inline-block;
+  text-align: center;
+}
+.pf-btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+  letter-spacing: 0.03em;
+
+  &:hover {
+    background-color: #0fab74;
+    color: #fff;
+  }
+}
+.pf-navbar-container {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 300ms ease-in-out;
+  z-index: 1000;
+}
+.pf-navbar {
+  padding-block: 1.375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.pf-navbar__nav {
+  display: none;
+}
+.pf-links {
+  display: flex;
+  list-style: none;
+  gap: 5rem;
+  
+  li {
+   padding: 0;
+  }
+}
+.pf-navbar__link {
+  text-decoration: none;
+  position: relative;
+  transition: color 300ms ease-in-out;
+  color: var(--default-text);
+
+  .selected {
+    color: #920751;
+    font-weight: 900;
+  }
+}
+.pf-navbar__link:hover {
+  color: #920751;
+}
+.pf-links a {
+  display: inline-block;
+  padding-left: 4rem;
+  position: relative;
+  color: var(--default-text);
+}
+.pf-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .pf-navbar--light .pf-navbar__link {
+    color: white;
+  }
+}
+.pf-navbar-fade-in .pf-navbar__link {
+  color: var(--gray-2);
+}
+.pf-navbar-fade-in .pf-burger {
+  color: #000 !important;
+}
+
+.email-cta {
+  display: inline;
+}
+
+@media screen and (min-width: 768px) {
+  .pf-burger {
+    display: none;
+  }
+  header {
+    justify-content: space-between;
+    p {
+      margin: 0 12rem;
+    }
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .links {
+    flex-direction: row;
+    margin-right: 5vw;
+  }
+  .icons {
+    padding: 0;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pf-navbar__navbar {
+    background-color: white;
+    position: absolute;
+    width: calc(100vw - 3rem);
+    height: calc(100vh - 73px);
+    top: 73px;
+    left: 0;
+    z-index: -1;
+    padding-inline: 1.5rem;
+    display: none;
+    flex-direction: column;
+    padding-top: 2.5rem;
+  }
+  .pf-links {
+    gap: 3rem;
+  }
+  .pf-navbar__navbar .pf-btn-container,
+  .pf-navbar__navbar .pf-btn {
+    width: calc(100% - 2rem) !important;
+  }
+  .pf-links {
+    flex-direction: column;
+    align-items: start;
+  }
+  .pf-navbar-active {
+    background-color: white;
+  }
+  .pf-navbar-active .pf-btn-container {
+    display: block !important;
+  }
+  .pf-navbar-active .pf-burger {
+    color: #000 !important;
+  }
+  .pf-navbar-active .pf-container {
+    border-bottom: 1px solid #dddddd;
+  }
+  .pf-navbar-active .pf-open {
+    display: none;
+  }
+  .pf-navbar-active .pf-close {
+    display: block;
+  }
+  .pf-navbar-active .pf-navbar__navbar {
+    display: flex;
+  }
+  .pf-close {
+    display: none;
+  }
+}
+
+/* Footer */
+.pf-footer {
+  padding-block: 2.5rem;
+}
+
+.pf-footer__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+}
+@media (max-width: 1200px) {
+}
+@media (min-width: 992px) {
+}
+@media (max-width: 991px) {
+}

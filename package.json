@@ -1,0 +1,21 @@
+{
+  "name": "projectfrida",
+  "version": "0.0.0",
+  "description": "we help you reinvent you, and your life",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "eleventy-plugin-blog-tools": "^0.4.1"
+  }
+}
