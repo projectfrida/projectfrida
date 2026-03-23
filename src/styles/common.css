@@ -85,7 +85,7 @@ p {
   gap: 5rem;
 }
 .pf-team__img {
-  background-image: url("/assets/images/us.jpg");
+  background-image: url("../assets/images/us.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
