@@ -26,7 +26,7 @@ h6 {
   line-height: 120%;
 }
 h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
 }
 h2 {
   font-size: clamp(2rem, 5vw, 4rem);
@@ -111,6 +111,9 @@ p {
   margin-top: 10rem;
 }
 .pf-mirror-intro__content {
+  p:first-of-type {
+    margin-top: 4rem;
+  }
 }
 .pf-mirror {
   margin: auto;
@@ -132,7 +135,7 @@ p {
   height: 800px;
 }
 .pf-mirror__about {
-  padding: 5rem 0;
+  padding: 5rem 0 0;
 }
 .pf-mirror__text {
   display: grid;
@@ -186,17 +189,15 @@ p {
 }
 .pf-jdc__img {
   background-image: url("../assets/images/jdc_story.png");
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
+  background-position: top;
 }
 .pf-tn__img {
   background-image: url("../assets/images/tn_story.png");
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
+  background-position: top;
 }
 .pf-story__content {
   margin: auto;
