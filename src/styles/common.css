@@ -26,7 +26,7 @@ h6 {
   line-height: 120%;
 }
 h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(2.75rem, 6vw, 5rem);
 }
 h2 {
   font-size: clamp(2rem, 5vw, 4rem);
@@ -97,11 +97,8 @@ p {
 .pf-team__img {
   background-image: url("../assets/images/us.jpg");
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  align-items: stretch;
-  margin-bottom: 2.5rem;
-  padding-bottom: 2.5rem;
+  background-position: top;
 }
 .pf-bathtub__text {
   max-width: 45rem;
@@ -111,8 +108,10 @@ p {
   margin-top: 10rem;
 }
 .pf-mirror-intro__content {
+  margin-bottom: 5rem;
+
   p:first-of-type {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 }
 .pf-mirror {
@@ -155,7 +154,7 @@ p {
   left: 0;
   width: 100%;
   height: 110%;
-  background-image: url("../assets/images/process.png");
+  background-image: url("../assets/images/process_bg.svg");
   opacity: 0.2;
   background-position: center;
   background-size: cover;
@@ -185,7 +184,7 @@ p {
 }
 .pf-story {
   max-width: 88rem;
-  margin: 2rem auto;
+  margin: 2rem auto 8rem;
 }
 .pf-jdc__img {
   background-image: url("../assets/images/jdc_story.png");
@@ -233,6 +232,14 @@ p {
 .pf-experience__content {
   margin: auto;
 }
+.pf-experience__process {
+  background-image: url("../assets/images/process.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+}
 .pf-experience__text {
   margin: 5rem auto;
   display: grid;
@@ -255,11 +262,12 @@ p {
     text-align: left;
     
     li {
-      padding: 0.5rem 0;
+      padding: 1rem 0;
     }
   }
 }
 .pf-divider {
+  display: block;
   background-image: url("../assets/images/divider.svg");
   background-size: contain;
   background-position: center;
@@ -381,7 +389,16 @@ p {
   cursor: pointer;
   font-size: 1.5rem;
 }
-
+.icons {
+  display: flex;
+  padding: 15px;
+}
+.icons a li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
 
 /* Contact */
 .pf-contact {
@@ -430,64 +447,48 @@ p {
   .pf-kablooey__text {
     max-width: 40rem;
   }
-}
-
-@media screen and (min-width: 768px) {
- .pf-burger {
-    display: none;
-  }
-  .ts-navbar__nav {
-    display: none;
+  .pf-who {
+    height: 600px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 769px) {
+  .pf-burger {
+    display: none;
+  }
+  .pf-navbar__nav {
+    display: none;
+  }
+  .pf-navbar--light .ts-navbar__link {
+    color: #fff;
+  }
+  .pf-navbar-fade-in .ts-burger {
+    color: #000 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pf-bathtub__content {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1.5fr;
+    gap: 3rem;
+  }
   .pf-navbar--light .pf-navbar__link {
     color: white;
   }
-}
-.pf-navbar-fade-in .pf-navbar__link {
-  color: var(--gray-2);
-}
-.pf-navbar-fade-in .pf-burger {
-  color: #000 !important;
-
- 
-  header {
-    justify-content: space-between;
-    p {
-      margin: 0 12rem;
-    }
-  }
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .links {
-    flex-direction: row;
-    margin-right: 5vw;
-  }
-  .icons {
-    padding: 0;
-    order: 2;
-  }
-
   .pf-navbar__navbar {
     background-color: white;
     position: absolute;
     width: calc(100vw - 3rem);
     height: calc(100vh - 73px);
-    top: 73px;
+    top: 5.5rem;
     left: 0;
     z-index: -1;
     padding-inline: 1.5rem;
     display: none;
     flex-direction: column;
     padding-top: 2.5rem;
-  }
-  .pf-links {
-    gap: 3rem;
   }
   .pf-navbar__navbar .pf-btn-container,
   .pf-navbar__navbar .pf-btn {
@@ -496,6 +497,7 @@ p {
   .pf-links {
     flex-direction: column;
     align-items: start;
+    gap: 2rem;
   }
   .pf-navbar-active {
     background-color: white;
@@ -521,7 +523,130 @@ p {
   .pf-close {
     display: none;
   }
+  .pf-copy {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .pf-experience-intro {
+    margin-bottom: 5rem;
+  }
+  .pf-experience__text {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .pf-experience__items {
+    padding: 0;
+  }
+  .pf-who {
+    height: 400px;
+  }
+  .pf-story__content {
+    gap: 3rem;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 2fr;
+  }
+  .pf-work__text {
+    max-width: 30rem;
+  }
+  .pf-jdc__img,
+  .pf-tn__img {
+    background-size: cover;
+    background-position: center;
+  }
+  .pf-jdc__image,
+  .pf-tn__image {
+    height: 400px;
+  }
+  .pf-mirror__about {
+   padding: 3rem 0 0;
+  } 
+  .pf-mirror__text {
+    grid-template-columns: none;
+    gap: 0;
+    margin: 3rem 0;
+  }
+  .pf-mirror__desc {
+    margin: 0;
+  }
+  .disclaimer {
+    text-align: center;
+  }
 }
-@media (max-width: 575px) {
+@media (max-width: 430px) {
+  .pf-hero__content {
+    padding: 4rem 0;
+  }
+  .pf-hero__img {
+    height: 300px;
+    margin: 3rem 0 0;
+  }
+  .pf-kablooey {
+    padding: 5rem 0;
+  }
+  .pf-kablooey__text {
+    p:first-of-type {
+      margin-top: 2rem;
+    }
+  }
+  .pf-team__img {
+    height: 200px;
+  }
+  .pf-bathtub__content {
+    grid-template-rows: 1fr;
+  }
+  .pf-experience-intro,
+  .pf-mirror-intro,
+  .pf-story-intro {
+    margin: 8rem auto 0;
+  }
+  .pf-experience-intro__content {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 0;
+  }
+  .pf-experience__process {
+    background-image: url("../assets/images/process_v.svg");
+    height: 890px;
+    margin: 5rem auto;
+  }
+  .pf-experience__text {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 1rem;
+  }
+  .pf-who__content {
+    width: auto;
+  }
+  .pf-story {
+    margin: 2rem auto 6rem;
+  }
+  .pf-story__content {
+    grid-template-rows: 1fr;
+  }
+  .pf-jdc__img,
+  .pf-tn__img {
+    height: 80vh;
+    margin: 0 -3rem;
+  }
+  .pf-jdc__image,
+  .pf-tn__image {
+    height: 40vh;
+    margin: 0 -3rem;
+  }
+  .pf-work {
+    height: 700px;
+    margin: 10rem auto;
+  }
+  .pf-work__content {
+    height: 800px;
+  }
+  .pf-work::before {
+    background-image: url("../assets/images/process_bg_v.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
