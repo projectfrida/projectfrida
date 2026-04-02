@@ -641,7 +641,7 @@ p {
     margin: 10rem auto;
   }
   .pf-work__content {
-    height: 800px;
+    height: 700px;
   }
   .pf-work::before {
     background-image: url("../assets/images/process_bg_v.svg");
