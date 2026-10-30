@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap');
 
 * {
   margin: 0;
@@ -9,8 +9,8 @@ html {
 }
 body {
   background-color: #fff;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 400;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 300;
   font-size: clamp(1.5rem, 3.5vw, 1.5rem);
   color: #000;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -21,15 +21,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 900;
-  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  font-family: "Sora", sans-serif;
   line-height: 120%;
 }
 h1 {
-  font-size: clamp(2.75rem, 8vw, 5rem);
+  font-size: clamp(3rem, 8vw, 5rem);
 }
 h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+}
+h3 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
 }
 .pf-mirror__desc {
   margin: 2.5rem 0;
@@ -42,11 +45,11 @@ p {
   color: #920751;
 }
 .em {
-  font-weight: 900;
+  font-weight: 800;
   font-style: italic;
 }
 .heavy {
-  font-weight: 900;
+  font-weight: 800;
 }
 .break {
   display: block;
@@ -58,51 +61,64 @@ p {
 .pf-hero {
   align-items: center;
 }
-.pf-hero__img {
-  background-image: url("../assets/images/hero.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 400px;
-  margin-bottom: 2.5rem;
-  padding-bottom: 2.5rem;
-}
 .pf-hero__content {
   text-align: center;
-  padding: 8rem 0 6rem;
+  padding: 10rem 0 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-weight: 100;
+  }
 }
-.pf-kablooey {
-  background: #920751;
+.pf-case {
+  background: #fff;
+  color: #000;
+  padding: 6rem;
+
+  p {
+    margin-top: 2rem;
+  }
+
+  i {
+    font-size: 1rem;
+  }
+
+  a {
+    color: #920751;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.pf-case__text {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+
+  .quote {
+    float: left;
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+
+}
+.pf-people {
+  background: #005A3d;
   color: #fff;
   padding: 6rem;
 }
-.pf-kablooey__text {
+.pf-people__text {
   max-width: 50rem;
   margin: auto;
 
   p:first-of-type {
     margin-top: 4rem;
   }
-}
-.pf-bathtub {
-  background: #fff;
-  color: #000;
-  padding: 6rem 0;
-}
-.pf-bathtub__content {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 5rem;
-}
-.pf-team__img {
-  background-image: url("../assets/images/us.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-.pf-bathtub__text {
-  max-width: 45rem;
-  margin: auto;
 }
 .pf-mirror-intro {
   margin-top: 10rem;
@@ -141,42 +157,8 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
 }
-.pf-work {
-  position: relative;
-  margin: 5rem auto;
-  max-width: 88rem;
-  height: 600px;
-}
-.pf-work::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  background-image: url("../assets/images/process_bg.svg");
-  opacity: 0.2;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-}
-.pf-work__content {
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  height: 600px;
-}
-.pf-work__text {
-  max-width: 50rem;
-  margin: auto;
-}
-.pf-work__btn {
-  margin-top: 4rem;
-}
 .pf-story-intro {
   margin: 10rem 0 4rem;
-}
-.pf-story-intro__content {
 }
 .pf-story__text {
   max-width: 50rem;
@@ -211,40 +193,52 @@ p {
   }
 }
 .pf-experience-intro {
-  margin: 10rem auto;
-  max-width: 75rem;
+  padding: 10rem 0;
+  background: #920751;
 }
 .pf-experience-intro__content {
+  max-width: 75rem;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   text-align: right;
   margin: auto;
+  color: #fff;
 }
 .pf-experience-intro__text {
   text-align: left;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  line-height: 150%;
 }
 .pf-experience {
-  max-width: 88rem;
   margin: 2rem auto;
 }
 .pf-experience__content {
   margin: auto;
 }
-.pf-experience__process {
-  background-image: url("../assets/images/process.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 400px;
+.pf-experience__header {
+  display: block;
+}
+.pf-experience__img {
+  display: flex;
+}
+.pf-experience__step {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pf-experience__step_item {
+  display: flex;
+  flex-direction: row;
 }
 .pf-experience__text {
-  margin: 5rem auto;
+  margin: 8rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 7rem;
+  gap: 3rem;
+  align-items: center;
 
   p {
     padding: 0;
@@ -257,6 +251,14 @@ p {
   text-align: center;
   padding-left: 5rem;
 
+}
+.pf-experience__summary {
+  max-width: 40rem;
+  margin: 5rem auto;
+  display: block;
+  color: #000;
+  text-align: left;
+
   ul {
     margin-top: 3rem;
     text-align: left;
@@ -266,6 +268,9 @@ p {
     }
   }
 }
+
+
+
 .pf-divider {
   display: block;
   background-image: url("../assets/images/divider.svg");
@@ -286,6 +291,9 @@ p {
 .pf-who__content {
   margin: auto;
   width: 37rem;
+  
+  color: #fff;
+
 }
 .d-none {
   display: none;
@@ -303,7 +311,7 @@ p {
   box-sizing: border-box;
   color: #920751;
   margin: 1rem 0;
-  font-weight: 900;
+  font-weight: 800;
   width: 100%;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 
@@ -323,7 +331,7 @@ p {
   border: 5px solid #fff;
   width: 100%;
   margin: 3rem 0;
-  font-weight: 900;
+  font-weight: 800;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 
   &:hover {
@@ -352,6 +360,8 @@ p {
 }
 .pf-links {
   display: flex;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 3.5vw, 1.25rem);
   
   li {
    list-style: none;
@@ -367,12 +377,12 @@ p {
 
   .selected {
     color: #920751;
-    font-weight: 900;
+    font-weight: 800;
   }
 }
 .pf-navbar__link.selected {
   color: #920751;
-  font-weight: 900;
+  font-weight: 800;
 }
 .pf-navbar__link:hover {
   color: #920751;
@@ -402,17 +412,18 @@ p {
 
 /* Contact */
 .pf-contact {
-  background: #920751;
-  color: #fff;
+  background: #FFC037;
+  color: #000;
   padding: 5rem 0;
 
   a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
   }
 }
 .message {
   margin-top: 1rem;
+  line-height: 150%;
 }
 
 /* Footer */
@@ -421,10 +432,14 @@ p {
 }
 
 .pf-footer__content {
+  margin: auto;
+  max-width: 40rem;
+  justify-content: center;
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
+
+  font-size: clamp(1.25rem, 3.5vw, 1.25rem);
 }
 
 @media (min-width: 1440px) {
@@ -464,12 +479,6 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .pf-bathtub__content {
-    display: grid;
-    grid-template-columns: none;
-    grid-template-rows: 1fr 1.5fr;
-    gap: 3rem;
-  }
   .pf-navbar--light .pf-navbar__link {
     color: white;
   }
@@ -519,15 +528,14 @@ p {
   .pf-close {
     display: none;
   }
-  .pf-copy {
-    display: block;
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+  .pf-hero__content {
+    text-align: center;
+    margin-top: 5rem;
+    display: grid;
+    gap: 1rem;
   }
   .pf-experience-intro {
-    margin-bottom: 5rem;
+    padding: 5rem 0;
   }
   .pf-experience__text {
     grid-template-columns: 1fr 1fr;
@@ -537,7 +545,7 @@ p {
     padding: 0;
   }
   .pf-who {
-    height: 400px;
+    height: 800px;
   }
   .pf-story__content {
     gap: 3rem;
@@ -570,8 +578,30 @@ p {
   .disclaimer {
     text-align: center;
   }
-}
-@media (max-width: 430px) {
+  .pf-experience__header {
+    display: flex;
+    justify-content: center;
+  }
+  .pf-experience__img {
+    display: block;
+    text-align: center;
+  }
+  .pf-experience__summary ul {
+    list-style-type: none;
+  }
+  .pf-experience__step {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .pf-experience__step_item {
+    display: block;
+  }
+  .pf-experience-intro__text {
+    margin-top: 3rem;
+  }
+  .pf-container {
+    margin: 0 2rem;
+  }
   .pf-hero__content {
     padding: 4rem 0;
   }
@@ -593,24 +623,25 @@ p {
   .pf-bathtub__content {
     grid-template-rows: 1fr;
   }
-  .pf-experience-intro,
   .pf-mirror-intro,
   .pf-story-intro {
     margin: 8rem auto 0;
+  }
+  .pf-case__text {
+    display: block;
+  }
+  .pf-case,
+  .pf-people {
+    padding: 5rem 0;
   }
   .pf-experience-intro__content {
     grid-template-columns: 1fr;
     text-align: left;
     gap: 0;
   }
-  .pf-experience__process {
-    background-image: url("../assets/images/process_v.svg");
-    height: 890px;
-    margin: 5rem auto;
-  }
   .pf-experience__text {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 5rem;
     margin-top: 1rem;
   }
   .pf-who__content {
